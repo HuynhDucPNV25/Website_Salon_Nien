@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Nien-Salon</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../css/HomePage.css">
+  </head>
+  <body>
+    <!-- Menu -->
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
+        <ul class="navbar-nav form-inline mr-auto">
+          <li >
+            <a href="" ><img id="logo" src="../../image/Logo.png" alt="Nien-Salon" ></a>
+          </li>
+
+          <li class="nav-item nav-item1 active">
+            <a class="nav-link" href="" >
+              <b>
+                TRANG CHỦ
+              </b>
+            </a>
+          </li>
+
+          <li class="nav-item nav-item2">
+            <a class="nav-link" href="#">
+              <b>
+                MẪU TÓC
+              </b>
+            </a>
+          </li>
+
+          <li class="nav-item nav-item3">
+            <a class="nav-link" href="##" >
+              <b>
+                ĐẶT LỊCH
+              </b>
+            </a>
+          </li> 
+
+          <li class="dropdown mt-3 ml-2">
+            <p class="form-inline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa-solid fa-location-dot pr-1" style="color: red;"></i>
+              <a href="" id="agency" data-agency="Thành phố Hà Nội">Thành phố Hà Nội</a> 
+            </p>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div class="container-fluid rounded">
+                <div class="row">
+                  <div class="col">
+                    <h4>
+                      Khu vực của bạn
+                      <i class="fa-solid fa-location-dot pl-1" style="color: red;" ></i>
+                    </h4>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col">
+                    <form class="form ">
+                      <select class="form-control text-dark mb-1 " id="city">
+                        <option disabled value="">Chọn</option>
+                        <option data-id="01" value="Thành phố Hà Nội" selected></option>
+                      </select>
+                    </form>
+                  </div>
+                </div>     
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- Login -->
+        <a href="">
+          <button class="btn btn-outline" id="login">
+            <i class="fa-regular fa-user"></i>
+            Đăng Nhập
+          </button>
+        </a>
+      </nav>
+
+    </div> 
+    <!-- Banner -->
+    <div class="banner container-fluid">
+      <div class="row" >
+        <div class="col-1"></div>
+
+        <div class="col">
+          <!--Form Tìm kiếm và đặt lịch -->
+            <form style="display: flex; width: 80%; height: 240px; ">
+
+            </form>
+          
+        </div>
+
+        <div class="col-1"></div>
+
+        <div class="col ">
+          <!-- slider quảng cáo -->
+          <div id="carouselId" class="carousel slide" data-ride="carousel" data-interval="2500">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselId" data-slide-to="0" ></li>
+              <li data-target="#carouselId" data-slide-to="1"></li>
+              <li data-target="#carouselId" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active ">
+                <!-- slide 1 -->
+                <div>
+                  <img src="../../image/pd1.png" alt="">
+                </div>   
+              </div>
+              <div class="carousel-item ">
+                <!-- slider 2 -->
+                <div class="">
+                  <img src="../../image/pd2.png" alt="">
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <!-- Slider3 -->
+                <div>
+                  <img src="../../image/GGG 2.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div id="sp-icon" class="carousel-control-prev" href="#carouselId"  data-slide="prev">
+                <span  class="carousel-control-prev-icon"></span>   
+            </div>
+            <a id="sp-icon" class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>    
+
+    <!-- Body -->
+    <div class="container-fluid">
+      
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../Js/HomePage.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+/* ...................Menu................................ */
+body{
+    background-repeat: no-repeat;
+    background-color: #F2F2F2;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    height: 80px;
+}  
+    .nav-item1,.nav-item2,.nav-item3{
+        border-radius: 4px;
+        border-bottom: 1px solid rgba(229, 229, 229, 0.96);
+        height: auto;
+        width: 150px;
+        justify-content: center;
+        text-align: center;
+        margin-left: 10px;
+    }
+    .nav-item:hover,#dropdownMenuButton:hover{
+        background: var(--main-color, linear-gradient(270deg, #ffea00 0.06%, rgba(177, 12, 0, 0.85) 97.68%));   
+    }
+    .active {
+        background: var(--main-color, linear-gradient(270deg, #ffb70095 0.06%, rgba(231, 25, 10, 0.867) 97.68%));
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        display: none;
+    }
+    #logo{
+        width: 131px;
+        height: 70px;   
+    }
+    #dropdownMenuButton{
+        border-radius: 10px;
+        max-width: 220px;
+        width: 220px;
+        height: auto;
+        padding: 8px;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(188, 187, 187, 0.96);
+    }
+    #city {
+        display: inline-block;
+        width: 250px;
+        background: var(--main-color, linear-gradient(270deg, #f1cf78 0.06%, rgba(226, 134, 128, 0.85) 97.68%));
+    }
+    #city:hover{
+        background: var(--main-color, linear-gradient(270deg, #ffb700 0.06%, rgba(231, 25, 10, 0.85) 97.68%));
+    }
+    #login{
+        border-radius: 20px;
+        background: var(--main-color, linear-gradient(270deg, #ffb700 0.06%, rgba(231, 25, 10, 0.85) 97.68%));
+        color: white;
+        height: 45px;
+    }
+    #login:hover{
+        background: var(--main-color, linear-gradient(270deg, #ffe600 0.06%, rgba(231, 25, 10, 0.85) 97.68%));
+    }
+/* ........................Banner.......................... */
+.banner{
+    position: relative;
+    border-top: 1px solid rgba(188, 187, 187, 0.96);
+    border-bottom: 1px solid rgba(188, 187, 187, 0.96);
+    top: 80px; 
+    background: linear-gradient(90deg, rgba(254, 90, 58, 1) 0%, rgba(220, 22, 98, 1) 100%);
+    background-color: #fe5a3a;  
+}
+
+.carousel-indicators li {
+    background-color: #AAA7A7;
+    border-radius: 50%;
+}
+.carousel-item img{
+    background-size: cover;
+    height: 240px;
+    width: 600px;
+}
+/* ....................Body............................ */
