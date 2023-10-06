@@ -1,0 +1,125 @@
+body {
+    background-image: url(1ae0f25c7d1651e828179aa965719925.jpg);
+    background-size: 145%;
+    margin: 0;
+}
+
+.form-register {
+    width: 40%;
+    margin-left: 30%;
+    background-color: rgb(188, 185, 185);
+    margin-top: 15%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.cancel-icon-login img {
+    width: 30px;
+    height: 30px;
+    margin-left: 93%;
+    margin-top: 5px;
+}
+
+.register-text {
+    display: flex;
+    height: 58.803px;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: bold !important;
+}
+
+#register {
+    margin: 20px;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+}
+
+.border-phone,
+.border-password {
+    width: 553.819px;
+    height: 85.754px;
+    border-radius: 40px;
+    border: 1px solid rgb(87, 84, 84);
+    background: #FFF;
+    font-size: 30px;
+    text-align: center;
+}
+
+.border-password {
+    margin-top: 20px;
+}
+
+.border-email {
+    width: 553.819px;
+    height: 85.754px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    border: 1px solid rgb(87, 84, 84);
+    background: #FFF;
+    font-size: 10px;
+    text-align: center;
+    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ask-have_account {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.register-in {
+    color: black;
+    text-decoration: underline;
+}
+
+/* media query */
+/* @media screen and (max-width: 480px) {
+    .form-login {
+        max-width: 240px;
+    }
+
+    .border-phone,
+    .border-password {
+        width: 240px;
+    }
+
+    .border-email {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form-login {
+        max-width: 300px;
+    }
+
+    .border-phone,
+    .border-password {
+        width: 300px;
+    }
+
+    .border-email {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .form-login {
+        max-width: 496px;
+    }
+
+    .border-phone,
+    .border-password {
+        width: 496px;
+    }
+
+    .border-email {
+        width: 496px;
+    }
+} */
