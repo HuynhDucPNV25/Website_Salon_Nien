@@ -12,7 +12,8 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Link CSS -->
   <link rel="stylesheet" href="../css/HomePage.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/Style-Hair-Model-Details.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
           <a href=""><img id="logo" src="../../image/Logo.png" alt="Nien-Salon"></a>
         </li>
         <li class="nav-item nav-item1 active">
-          <a class="nav-link" href="#TrangChu">
+          <a class="nav-link" href="/src/html/HomePage.html">
             <b>
               TRANG CHỦ
             </b>
@@ -132,19 +133,47 @@
 
   <!-- Body -->
 
-  <div class="container slide-container bg-light">
-    <p id="topSalon"></p>
-    <div class="row slider" id="salonContainer">
-      
+  <bodys class="body-detail">
+
+    <div class="container" id="Hair-Model-Details">
+        <div class="row">
+            <div class="col-md-4" id="Hair-Model-Details-img">
+                <img src="../../image/Toc-layer-mai-bay-HairModel.jpg" alt="">
+            </div>
+            <div class="col-md-8" id="Hair-Model-Details-text">
+                <h3 class="Hair-Model-Details-title">Mẫu tóc layer mái bay</h3>
+                <h5 class="Hair-Model-Details-shop">Tiệm: Sang shine</h5>
+                <p>Kiểu tóc được cắt và tỉa một cách tỉ mỉ và linh hoạt sao cho tạo thành nhiều lớp tóc khác nhau</p>
+                <p>Dịch vụ kèm theo : gội đầu</p>
+                <p>Địa chỉ : 101B - Lê Hữu - Sơn Trà - Đà Nẵng</p>
+                <p class="detail-hair-price">Giá : <span class="strike-through" id="price-star" >500.000VNĐ</span></p>
+                <p class="detail-hair-price">Chỉ : 300.000VNĐ</p>
+                <div>
+                    <button type="button" class="btn btn-light mt-2" onclick="Calender()">Đặt lịch</button>
+                </div>
+            </div>
+
+          </div>      
     </div>
-  </div>
-  <br>
-
-  <div class="container slide-container bg-light">
-    <p id="topMauToc"></p>
-    <div class="row slider" id="hairContainer"></div>
-  </div>
-
+    <div class="col-md-12 mt-4" id="Hair-Model-Details-texts-feedback">
+        <h3>Chi tiết mẫu tóc</h3>
+        <p>Đây là kiểu tóc được cắt thành nhiều lớp xếp lên nhau, các lớp tóc cũng được cắt xen kẽ khá đẹp.<br>
+           Đặc điểm của kiểu tóc Layer chính là Phần đuôi tóc được tia nhọn và bầu.</p>
+    </div>
+    <div class="col-md-12" id="Hair-Model-Details-icon">
+        <h3>Đánh giá mẫu tóc</h3>
+        <div class="col-md-12" id="Hair-Model-Details-star">
+            <p>0.0/5</p>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <p class="Evaluate">(0 đánh giá)</p>
+            <p>Hãy đánh giá để có trải nghiệm tốt hơn</p>
+        </div>
+    </div>
+</bodys>
   <!--Footer  -->
   <footer class="footer-tp" class="page-footer font-small indigo text-nowrap ">
     <!-- Footer Links -->
@@ -207,10 +236,10 @@
               </a>
             </li>
             <li>
-              <a href="#!">Mẫu tóc </a>
+              <a href="#MauToc">Mẫu tóc </a>
             </li>
             <li>
-              <a href="#!">Đặt lịch</a>
+              <a href="#DatLich">Đặt lịch</a>
             </li>
             <li>
               <a href="https://thuvienlamdep.vn/bai-viet-ve-toc-dep" target="_blank">Tin tức</a>
@@ -263,5 +292,4 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
-
 </html>

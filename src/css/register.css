@@ -1,16 +1,16 @@
 body {
-    background-image: url(1ae0f25c7d1651e828179aa965719925.jpg);
+    background-image: url(../../image/1ae0f25c7d1651e828179aa965719925.jpg);
     background-size: 145%;
     margin: 0;
 }
 
 .form-register {
-    width: 40%;
-    margin-left: 30%;
+    width: 30%;
+    height: 60%;
     background-color: rgb(188, 185, 185);
-    margin-top: 15%;
-    text-align: center;
     border-radius: 20px;
+    position: relative;
+    top: 80px;
 }
 
 .cancel-icon-login img {
@@ -34,18 +34,19 @@ body {
 #register {
     margin: 20px;
     border-radius: 10px;
-    width: 200px;
+    width: 80%;
     height: 40px;
+    background: var(--main-color, linear-gradient(270deg, #ffea00 0.06%, rgba(177, 12, 0, 0.85) 97.68%));   
 }
 
 .border-phone,
 .border-password {
-    width: 553.819px;
-    height: 85.754px;
+    width: 80%;
+    height: 40px;
     border-radius: 40px;
     border: 1px solid rgb(87, 84, 84);
     background: #FFF;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -54,14 +55,10 @@ body {
 }
 
 .border-email {
-    width: 553.819px;
-    height: 85.754px;
-    flex-shrink: 0;
+    width: 80%;
+    height: 50px;
     border-radius: 40px;
-    border: 1px solid rgb(87, 84, 84);
-    background: #FFF;
-    font-size: 10px;
-    text-align: center;
+    background: #FFF;   
     padding: 5px;
     display: inline-flex;
     align-items: center;
@@ -70,12 +67,12 @@ body {
 
 .ask-have_account {
     font-size: 18px;
-    margin-bottom: 0px;
 }
 
 .register-in {
-    color: black;
-    text-decoration: underline;
+    position: relative;
+    top: -10px;
+    text-decoration: none;
 }
 
 /* media query */

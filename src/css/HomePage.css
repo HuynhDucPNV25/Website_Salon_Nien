@@ -60,10 +60,25 @@ body{
         background: var(--main-color, linear-gradient(270deg, #ffb700 0.06%, rgba(231, 25, 10, 0.85) 97.68%));
         color: white;
         height: 45px;
+        
     }
     #login:hover{
         background: var(--main-color, linear-gradient(270deg, #ffe600 0.06%, rgba(231, 25, 10, 0.85) 97.68%));
     }
+    #logout{
+        border-radius: 20px;
+        background: var(--main-color, linear-gradient(270deg, #ffb700 0.06%, rgba(231, 25, 10, 0.85) 97.68%));
+        color: white;
+        height: 45px;
+    }
+    #logout a{
+        text-decoration: none;
+        color: #353535;
+    }
+    #logout:hover{
+        background: var(--main-color, linear-gradient(270deg, #ffe600 0.06%, rgba(231, 25, 10, 0.85) 97.68%));
+    }
+
 /* ........................Banner.......................... */
 .banner{
     position: relative;
@@ -145,53 +160,53 @@ body{
         font-weight: 700;
 
     }
-/* Footer */
+    
+/* ....................Footer............................ */
+
 .footer-tp{
     background-color: #D9D9D9;
     position: relative;
     top: 150px;
-}
-
-/* Text */
-div .list-group li a{
-    color: #696464;
-}
-
-div .list-group li p{
-    color: #726e6e;
-}
-div .list-group li a:hover{
-    color: #DC2C2C;
-}
-
-/* QR code  */
-div .list-group a img{
-    width: 10vh;
-    height: 10vh;
-    margin-bottom: 2vh;
-    background-repeat: no-repeat;
-}
-
-/* Icons */
-div .list-group li a .fa-facebook-square{
-    color: #1877F2;
     }
-    div .list-group li a .fa-youtube-play{
+
+    /* Text */
+    div .list-group li a{
+        color: #696464;
+    }
+    div .list-group li p{
+        color: #726e6e;
+    }
+    div .list-group li a:hover{
         color: #DC2C2C;
     }
-    div .list-group li a .fa-instagram{
-        color: #D82D7E;
-    }
-    div .list-group li a .fa{
-        width: 20px;
-        height: 20px;
+    /* QR code  */
+    div .list-group a img{
+        width: 10vh;
+        height: 10vh;
+        margin-bottom: 2vh;
+        background-repeat: no-repeat;
     }
 
-/* Footer- coppyright */
-.footer-tp .footer-copyright{
-    height: 8vh;
-    background-color: #B3ADAD;
-    color: white;
-    padding-bottom: 10px;
-    
-}
+    /* Icons */
+    div .list-group li a .fa-facebook-square{
+        color: #1877F2;
+        }
+        div .list-group li a .fa-youtube-play{
+            color: #DC2C2C;
+        }
+        div .list-group li a .fa-instagram{
+            color: #D82D7E;
+        }
+        div .list-group li a .fa{
+            width: 20px;
+            height: 20px;
+        }
+
+    /* Footer- coppyright */
+    .footer-tp .footer-copyright{
+        height: 8vh;
+        background-color: #B3ADAD;
+        color: white;
+        padding-bottom: 10px;   
+    }
+/* ................................................ */

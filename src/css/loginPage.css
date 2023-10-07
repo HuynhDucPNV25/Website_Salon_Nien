@@ -1,16 +1,20 @@
 body {
-    background-image: url(1ae0f25c7d1651e828179aa965719925.jpg);
-    background-size: 145%;
-    margin: 0;
-}
+    background-image: url(../../image/1ae0f25c7d1651e828179aa965719925.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100vw;
+    max-height: 97.8vh;
+    width: 100vw;
+    height: 97.8vh;
+} 
 
 .form-login {
-    width: 40%;
-    margin-left: 30%;
+    width: 30%;
+    height: 60%;
     background-color: rgb(188, 185, 185);
-    margin-top: 15%;
-    text-align: center;
     border-radius: 20px;
+    position: relative;
+    top: 80px;
 }
 
 .cancel-icon-login img {
@@ -34,8 +38,10 @@ body {
 #login{
     margin: 20px;
     border-radius: 10px;
-    width: 200px;
+    width: 80%;
     height: 40px;
+    background: var(--main-color, linear-gradient(270deg, #ffea00 0.06%, rgba(177, 12, 0, 0.85) 97.68%));   
+    
 }
 
 #login a{
@@ -44,12 +50,12 @@ body {
 
 .border-phone,
 .border-password {
-    width: 553.819px;
-    height: 85.754px;
+    width: 80%;
+    height: 40px;
     border-radius: 40px;
     border: 1px solid rgb(87, 84, 84);
     background: #FFF;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -58,24 +64,28 @@ body {
 }
 
 .border-email {
-    width: 553.819px;
-    height: 85.754px;
-    flex-shrink: 0;
+    width: 80%;
+    height: 40px;
     border-radius: 40px;
-    border: 1px solid rgb(87, 84, 84);
-    background: #FFF;
-    font-size: 10px;
-    text-align: center;
+    background: #FFF;   
     padding: 5px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
+.border-email:focus{
+    background-color: aqua;
+    height: 50px;
+}
+
+.iconEmail-Login{
+    height: 30px;
+    margin-top: 10px;
+}
 
 .email-login {
-    text-decoration: none;
-    color: #000;
-    font-size: 30px;
+    
+    font-size: 18px;
     font-family: "Inter";
     font-weight: Bold;
     color: rgba(254, 169, 72, 1)!important;
@@ -86,8 +96,10 @@ body {
     font-size: 18px;
 }
 
-.sign-in {
-    margin-bottom: 10px;
+.sign-in,.sign-in:hover {
+    position: relative;
+    top: -10px;
+    text-decoration: none;
 }
 
 /* media query */
