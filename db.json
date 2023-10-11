@@ -1,0 +1,71 @@
+{
+  "Salons": [
+    {
+      "id": 1,
+      "title": "Niên Salon",
+      "author": "Đức",
+      "img": "https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "address":"Thành phố Hà Nội"
+    },
+    {
+      "id": 2,
+      "title": "Hair Salon",
+      "author": "Sang",
+      "img": "https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "address":"Thành phố Hà Nội"
+    },
+    {
+      "id": 3,
+      "title": "Hair 3",
+      "author": "Niên",
+      "img": "https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "address":"Thành phố Hà Nội"
+    },
+    {
+      "id": 4,
+      "title": "Hair 4",
+      "author": "Phát",
+      "img": "https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "address":"Thành phố Hà Nội"
+    }
+  ],
+  "slide-img":[
+    { "img1": "" },
+    { "img2": "" },
+    { "img3": ""}
+  ],
+  "Hairs":[
+    {
+      "id":1,
+      "name":"Layer ngắn Hàn Quốc",
+      "salon":"Niên Salon",
+      "price":19.9,
+      "discount": 20.5,
+      "new":false
+    },
+    {
+      "id":2,
+      "name":"Layer ngắn Hàn Quốc",
+      "salon":"Hair Salon",
+      "price":19.9,
+      "discount": 0,
+      "new":true
+    },
+    {
+      "id":3,
+      "name":"Layer ngắn Hàn Quốc",
+      "salon":"Niên Salon",
+      "price":19.9,
+      "discount": 20.5,
+      "new":false
+    },
+    {
+      "id":4,
+      "name":"Layer ngắn Hàn Quốc",
+      "salon":"Niên Salon",
+      "price":19.9,
+      "discount": 20.5,
+      "new":false
+    }    
+  ]
+}

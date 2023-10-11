@@ -70,7 +70,6 @@ items.forEach(item => {
 });
 //......... 
 
-
 const slideData = [
   { imageSrc: "../../image/pd1.png" },
   { imageSrc: "../../image/pd2.png" },
@@ -98,12 +97,9 @@ slideData.forEach(function(slide, index) {
   carouselInner.appendChild(slideElement);
 });
 
-// ................Data-Salon............
-const dataSalon = "https://65194cc9818c4e98ac603f1c.mockapi.io/api/salons";
+// ................Data-Salon.. (Salon and Hairmodel)..........
+const dataSalon = "http://localhost:4001/Salons";
 const salonC = document.querySelector('#salonContainer');
-
-const dataHair = "https://65194cc9818c4e98ac603f1c.mockapi.io/api/hairModels";
-const hairC = document.querySelector('#hairContainer');
 
 
 async function fetchDataSalon() {
@@ -120,7 +116,7 @@ async function fetchDataSalon() {
       const div = document.createElement('div');
       div.classList.add('col');
       div.innerHTML = `
-      <div class="card">
+      <div class="card" id="card">
           <center>
           <h2>Chưa có Salon tại chi nhánh này</h2>
         </center>
@@ -133,16 +129,16 @@ async function fetchDataSalon() {
       const div = document.createElement('div');
       div.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'col-12');
       div.innerHTML = `
-        <a href="/src/html/Hair-Model-Details.html">
-          <div class="card" >
-            <img style="max-height:190.05px;" src="${salon.image}" alt="${salon.name}" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #CC2C2C;" >${salon.name}</h5>
+        <a href="/src/html/Hair-Model-Details.html" id="cards">
+          <div class="card" id="card">
+            <img style="max-height:190.05px;" src="${salon.img}" alt="${salon.title}" class="card-img-top">
+            <div class="card-body"">
+              <h5 class="card-title" style="color: #CC2C2C;" >${salon.title}</h5>
               <p class="card-text" style="color: gray";>Địa Chỉ: ${salon.address}</p>
+              <p class="card-text" style="color: gray;";>Chủ Salon: ${salon.author}</p>
             </div>
           </div><br>
         </a>
-        
       `;
       salonC.appendChild(div);
     });}
@@ -164,34 +160,4 @@ $("#city").change(() => {
   fetchDataSalon();
 });
 fetchDataSalon();
-
 // ............................................................
-async function fetchDataHair() {
-  try {
-    const response = await fetch(dataHair);
-    const data = await response.json();
-    const filteredDataHair = data.filter(hair => hair.price !== null);
-    filteredDataHair.forEach(hair => {
-      const div = document.createElement('div');
-      div.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'col-12');
-      div.innerHTML = `
-        <a href="/src/html/Hair-Model-Details.html">
-          <div class="card">
-            <img style="max-height:190.05px;" src="${hair.image}" alt="${hair.name}" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #CC2C2C;">${hair.name}</h5>
-              <p class="card-text" style="color: gray;">Địa chỉ: ${hair.address}</p>
-              <p class="card-text" style="color: #CC2C2C;">Giá: ${hair.price} VNĐ</p>
-            </div>
-          </div><br>
-        </a>
-      `;
-      hairC.appendChild(div);
-    });
-  } catch (error) {
-    console.error(error);
-  }
-}
-fetchDataHair();
-
-

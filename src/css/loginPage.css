@@ -34,7 +34,9 @@ body {
     font-size: 32px;
     font-weight: bold!important;
 }
-
+body{
+    
+}
 #login{
     margin: 20px;
     border-radius: 10px;

@@ -86,7 +86,6 @@ body{
     border-bottom: 1px solid rgba(188, 187, 187, 0.96);
     top: 80px; 
     background: linear-gradient(90deg, rgba(254, 90, 58, 1) 0%, rgba(220, 22, 98, 1) 100%);
-    background-color: #fe5a3a;  
     }
 
 .col-bannerForm{
@@ -160,7 +159,15 @@ body{
         font-weight: 700;
 
     }
-    
+    #cards:hover{
+        text-decoration: none;
+    }
+    #card:hover{
+        transition: all 0.2s ease-out;
+        box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+        top: -4px;
+        
+    }
 /* ....................Footer............................ */
 
 .footer-tp{
