@@ -1,34 +1,4 @@
 {
-  "Salons": [
-    {
-      "id": 1,
-      "title": "Niên Salon",
-      "author": "Đức",
-      "img": "https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      "address":"Thành phố Hà Nội"
-    },
-    {
-      "id": 2,
-      "title": "Hair Salon",
-      "author": "Sang",
-      "img": "https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      "address":"Thành phố Hà Nội"
-    },
-    {
-      "id": 3,
-      "title": "Hair 3",
-      "author": "Niên",
-      "img": "https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      "address":"Thành phố Hà Nội"
-    },
-    {
-      "id": 4,
-      "title": "Hair 4",
-      "author": "Phát",
-      "img": "https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      "address":"Thành phố Hà Nội"
-    }
-  ],
   "slide-img":[
     { "img1": "" },
     { "img2": "" },
@@ -37,32 +7,44 @@
   "Hairs":[
     {
       "id":1,
+      "img":"https://res.cloudinary.com/duas1juqs/image/upload/v1696642828/hair-models/Mautoc5_rgrmks.jpg",
       "name":"Layer ngắn Hàn Quốc",
-      "salon":"Niên Salon",
+      "city":"Thành phố Hà Nội",
+      "address":"Ngô Quyền, Hà Nội",
+      "describe":"Kiểu tóc được cắt và tỉa một cách tỉ mỉ và linh hoạt sao cho tạo thành nhiều lớp tóc khác nhau",
       "price":19.9,
       "discount": 20.5,
       "new":false
     },
     {
       "id":2,
+      "img":"https://res.cloudinary.com/duas1juqs/image/upload/v1696642828/hair-models/Mautoc5_rgrmks.jpg",
       "name":"Layer ngắn Hàn Quốc",
-      "salon":"Hair Salon",
+      "city":"Thành phố Đà Nẵng",
+      "address":"Mỹ Khê 3, Đà Nẵng",
+      "describe":"Kiểu tóc layer ngắn Hàn Quốc cho nữ có lớp tóc chưa đồng đều và lông mái dài, kết hợp với màu nhẹ nhàng để tạo nét thanh lịch. Tóc hai bên cắt ngắn hơn phần giữa để tạo kiểu lớp. Phong cách này thường được kết hợp với phụ kiện để tạo nên phong cách nữ tính-tomboy.",
       "price":19.9,
       "discount": 0,
       "new":true
     },
     {
       "id":3,
+      "img":"https://res.cloudinary.com/duas1juqs/image/upload/v1696642828/hair-models/Mautoc5_rgrmks.jpg",
       "name":"Layer ngắn Hàn Quốc",
-      "salon":"Niên Salon",
+      "city":"Thành phố Hồ Chí Minh",
+      "address":"Hai Bà Trưng, Hồ Chí Minh",
+      "describe":"Kiểu tóc ngắn nữ Hàn Quốc có chiều dài tóc ở vai hoặc ngắn hơn, được cắt layer và thường kết hợp với lông mái dài. Màu sắc nhẹ nhàng và tạo điểm nhấn bằng phụ kiện nữ tính.",
       "price":19.9,
       "discount": 20.5,
       "new":false
     },
     {
       "id":4,
-      "name":"Layer ngắn Hàn Quốc",
-      "salon":"Niên Salon",
+      "img":"https://res.cloudinary.com/duas1juqs/image/upload/v1696642828/hair-models/Mautoc5_rgrmks.jpg",
+      "name":"Layer ngắn Việt Nam",
+      "city":"Thành phố Hà Nội",
+      "address":"Ngô Quyền, Hà Nội",
+      "describe":"Kiểu tóc layer Nhật Bản là một kiểu tóc dài với lớp tóc cắt thành các lớp nhỏ và đặc biệt phần phía trước được cắt thưa, tạo nên vẻ nữ tính và nhẹ nhàng.",
       "price":19.9,
       "discount": 20.5,
       "new":false

@@ -1,4 +1,3 @@
-
 const host = "https://provinces.open-api.vn/api/";
 
 // Hàm gọi API và hiển thị dữ liệu
@@ -6,7 +5,7 @@ const callAPI = () => {
   axios.get(host + "?depth=1")
     .then((response) => {
       renderData(response.data, "city");
-      let selectedCity = localStorage.getItem("selectedCity") || "Thành phố Hà Nội";
+      let selectedCity = $("#agency").attr("data-agency") || "Thành phố Hà Nội";
       $("#city").val(selectedCity).filter("option[value='" + selectedCity + "']").attr("selected", true);
     });
 };
@@ -21,20 +20,21 @@ const renderData = (array, select) => {
 };
 
 $(document).ready(function() {
-  // Lấy thành phố được chọn từ localStorage hoặc giá trị mặc định
-  let selectedCity = localStorage.getItem("selectedCity") || "Thành phố Hà Nội";
+  // Lấy thành phố được chọn từ phần footer hoặc giá trị mặc định
+  let selectedCity = $("#agency").attr("data-agency") || "Thành phố Hà Nội";
 
   // Khởi tạo thẻ <select> và văn bản của thành phố
-  $("#agency").text(selectedCity);
   $("#city").val(selectedCity);
-  $("#topSalon").text("Salon tại "+(selectedCity));
-  $("#topMauToc").text("Tất cả mẫu tóc ");
+  $("#agency").text(selectedCity).attr("data-agency", selectedCity);
+  $("#topSalon").text(`Top salon tại ${selectedCity}`).attr("data-agency", selectedCity);
+  $("#topMauToc").text(`Top mẫu tóc hót tại ${selectedCity}`).attr("data-agency", selectedCity);
+
   // Xử lý sự kiện thay đổi của thẻ <select>
   $("#city").change(() => {
     selectedCity = $("#city option:selected").text();
     $("#agency").text(selectedCity).attr("data-agency", selectedCity);
-    $("#topSalon").text(("Salon tại ")+selectedCity).attr("data-agency", selectedCity);
-    $("#topMauToc").text(("Tất cả mẫu tóc ")).attr("data-agency", selectedCity);
+    $("#topSalon").text(`Top salon tại ${selectedCity}`).attr("data-agency", selectedCity);
+    $("#topMauToc").text(`Top mẫu tóc hót tại ${selectedCity}`).attr("data-agency", selectedCity);
     localStorage.setItem("selectedCity", selectedCity);
   });
 
@@ -45,6 +45,7 @@ $(document).ready(function() {
 
   // Gọi API để hiển thị dữ liệu
   callAPI();
+
 });
 
 // Lấy danh sách các item
@@ -68,7 +69,6 @@ items.forEach(item => {
     item.classList.remove('inactive');
   });
 });
-//......... 
 
 const slideData = [
   { imageSrc: "../../image/pd1.png" },
@@ -92,72 +92,68 @@ slideData.forEach(function(slide, index) {
       <img src="${slide.imageSrc}" alt="">
     </div>
   `;
-  
+
   // Thêm slide vào container
   carouselInner.appendChild(slideElement);
 });
 
-// ................Data-Salon.. (Salon and Hairmodel)..........
-const dataSalon = "http://localhost:4001/Salons";
-const salonC = document.querySelector('#salonContainer');
 
+//Data-Salon.. (Salon and Hairmodel)..........
+const hairDataUrl = "http://localhost:4002/hairs";
+const hairModel = document.querySelector('#Hairmodel-Agency');
 
-async function fetchDataSalon() {
+async function fetchHairData() {
   try {
-    const responseS = await axios.get(dataSalon);
-    const dataS = responseS.data;
-
-    const selectedCity = $("#agency").text();
-
-    const filteredDataSalon = dataS.filter(data => data.address === selectedCity);
-
-    // Tiếp tục xử lý dữ liệu lọc được (filteredDataSalon) ở đây
-    if (filteredDataSalon.length === 0) {
+    const response = await axios.get(hairDataUrl);
+    const hairData = response.data;
+    const selectedCity = $("#agency").attr("data-agency");
+    const filteredHairData = hairData.filter(data => data.city === selectedCity);
+    if (filteredHairData.length === 0) {
       const div = document.createElement('div');
       div.classList.add('col');
       div.innerHTML = `
-      <div class="card" id="card">
+        <div class="card" id="card">
           <center>
-          <h2>Chưa có Salon tại chi nhánh này</h2>
-        </center>
+            <h2>Chưa có chi nhánh này</h2>
+          </center>
         </div>
-        
       `;
-      salonC.appendChild(div);
+      hairModel.appendChild(div);
     } else {
-    filteredDataSalon.forEach(salon => {
-      const div = document.createElement('div');
-      div.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'col-12');
-      div.innerHTML = `
-        <a href="/src/html/Hair-Model-Details.html" id="cards">
-          <div class="card" id="card">
-            <img style="max-height:190.05px;" src="${salon.img}" alt="${salon.title}" class="card-img-top">
-            <div class="card-body"">
-              <h5 class="card-title" style="color: #CC2C2C;" >${salon.title}</h5>
-              <p class="card-text" style="color: gray";>Địa Chỉ: ${salon.address}</p>
-              <p class="card-text" style="color: gray;";>Chủ Salon: ${salon.author}</p>
-            </div>
-          </div><br>
-        </a>
-      `;
-      salonC.appendChild(div);
-    });}
+      filteredHairData.forEach(item => {
+        const div = document.createElement('div');
+        div.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'col-12');
+        div.innerHTML = `
+          <a href="/src/html/TN-16_Hair-Model.html"  id="${item.id}" class="cards">
+            <div class="card card" id="cards">
+              <img style="max-height:190.05px;" src="${item.img}" alt="${item.name}" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #CC2C2C;">${item.name}</h5>
+                <p class="card-text" style="color: gray;">Địa chỉ: ${item.address}</p>
+                <p class="card-text"> ID: ${item.id}</p>
+              </div>
+            </div><br>
+          </a>
+        `;
+        hairModel.appendChild(div);
+      });
+    }
   } catch (error) {
     console.error(error);
   }
+
 }
 
 $("#city").change(() => {
   const selectedCity = $("#city option:selected").text();
   $("#agency").text(selectedCity).attr("data-agency", selectedCity);
-  $("#topSalon").text(("Top salon tại ") + selectedCity).attr("data-agency", selectedCity);
-  $("#topMauToc").text(("Top mẫu tóc hót tại ") + selectedCity).attr("data-agency", selectedCity);
+  $("#topSalon").text(`Top salon tại ${selectedCity}`).attr("data-agency", selectedCity);
+  $("#topMauToc").text(`Top mẫu tóc hót tại ${selectedCity}`).attr("data-agency", selectedCity);
   localStorage.setItem("selectedCity", selectedCity);
-  while (salonC.firstChild) {
-    salonC.firstChild.remove();
-
+  while (hairModel.firstChild) {
+    hairModel.firstChild.remove();
   }
-  fetchDataSalon();
+  fetchHairData();
 });
-fetchDataSalon();
-// ............................................................
+
+fetchHairData();
